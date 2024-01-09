@@ -30,14 +30,14 @@ function getPasswordCriteria() {
     alert("Your password must be between 8 and 64 characters.");
     return getPasswordCriteria(); // recursive function to restart if input is out of bounds
   }
-
-  let lowerChoice = confirm("Would you like your password to contain lowercase characters?");
-  if (lowerChoice) {
-    userChoices = userChoices.concat(lowercaseChars);
-  }
+  
   let upperChoice = confirm("Would you like your password to contain uppercase characters?");
   if (upperChoice) {
     userChoices = userChoices.concat(uppercaseChars);
+  }
+  let lowerChoice = confirm("Would you like your password to contain lowercase characters?");
+  if (lowerChoice) {
+    userChoices = userChoices.concat(lowercaseChars);
   }
   let numberChoice = confirm("Would you like your password to contain numbers?");
   if (numberChoice) {
