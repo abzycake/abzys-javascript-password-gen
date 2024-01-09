@@ -63,6 +63,11 @@ function generatePassword() {
   console.log(userOptions);
   let password = '';
 
+  if (userOptions.userChoices.length === 0) {
+    alert("Please select at least one character type.");
+    return generatePassword(); // recursive function to restart if no character types are selected
+  }
+
   for (let i = 0; i < userOptions.passLength; i++) {
     password += getRandomElement(userOptions.userChoices);
   }
