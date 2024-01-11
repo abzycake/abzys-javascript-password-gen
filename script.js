@@ -26,8 +26,8 @@ function getPasswordCriteria() {
     return getPasswordCriteria(); // recursive function to restart if input is invalid
   }
 
-  if (isNaN(passLength) || passLength < 8 || passLength > 64) {
-    alert("Your password must be between 8 and 64 characters.");
+  if (isNaN(passLength) || passLength < 8 || passLength > 128) {
+    alert("Your password must be between 8 and 128 characters.");
     return getPasswordCriteria(); // recursive function to restart if input is out of bounds
   }
   
